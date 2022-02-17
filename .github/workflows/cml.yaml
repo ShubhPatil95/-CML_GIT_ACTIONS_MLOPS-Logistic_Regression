@@ -16,7 +16,7 @@ jobs:
           python train.py
           echo "Below is the Accuracy" > report.md
           cat Outputs.txt >> report.md
-          echo "Confusion Matrix" >> report.md
+          echo "\nConfusion Matrix" >> report.md
           cml-publish confusion_matrix.png --md >> report.md         
           
           cml send-comment report.md
